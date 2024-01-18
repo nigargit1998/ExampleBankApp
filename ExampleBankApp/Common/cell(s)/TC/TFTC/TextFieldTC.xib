@@ -23,7 +23,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKv-8a-hNq" userLabel="input">
                                 <rect key="frame" x="0.0" y="0.0" width="394" height="38"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-ao-hmr">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-ao-hmr" customClass="TextField" customModule="ExampleBankApp" customModuleProvider="target">
                                         <rect key="frame" x="13.5" y="-1" width="367" height="38"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,6 +74,11 @@
             <point key="canvasLocation" x="-9.4202898550724647" y="20.424107142857142"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="abv-ao-hmr">
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="SurfaceVariant">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

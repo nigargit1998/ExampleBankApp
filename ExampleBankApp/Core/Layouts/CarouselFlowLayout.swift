@@ -1,5 +1,5 @@
 //
-//  Card(v).swift
+//  CarouselFlowLayout.swift
 //  ExampleBankApp
 //
 //  Created by Mammadova Nigar Rauf on 18.01.24.
