@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+public class TransferModel: Object {
+    @Backend() public var senderCardNumber: String
+    @Backend() public var receiverCardNumber: String
+}
+
+

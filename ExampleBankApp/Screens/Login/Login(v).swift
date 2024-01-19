@@ -15,8 +15,12 @@ class LoginView: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     @IBAction func login(_ sender: UIButton) {
+        ProgressHUD.start()
         viewModel.request {
-            self.navigationController?.pushViewController(CardView(data: 0), animated: true)
+            ProgressHUD.stop()
+            if let cardViewController = self.storyboard?.instantiateViewController(withIdentifier: "CardsView") as? CardsView {
+                self.navigationController?.pushViewController(cardViewController, animated: true)
+            }
         }
     }
     
@@ -25,6 +29,7 @@ class LoginView: UIViewController {
         navigationItem.title = Local.loginTitle.rawValue
         tableView?.register(TextFieldTC.nib, forCellReuseIdentifier: TextFieldTC.identifier)
         tableView?.separatorStyle = .none
+        button.setTitle(Local.continue.rawValue, for: .normal)
     }
 }
 
@@ -41,9 +46,14 @@ extension LoginView: UITableViewDelegate, UITableViewDataSource {
         case 1:
             return cell.configure(.init(title: Local.name.rawValue))
         case 2:
-            return cell.configure(.init(title: Local.birth.rawValue))
+            return cell.configure(.init(title: Local.birth.rawValue,
+                                        mask: .style(.bday),
+                                        resign: true))
         case 3:
-            return cell.configure(.init(title: Local.gsm.rawValue))
+            return cell.configure(.init(title: Local.gsm.rawValue,
+                                        prefix: "+994 ",
+                                        mask: .style(.phone),
+                                        resign: true))
         default:
             return cell
         }

@@ -23,7 +23,7 @@ class LabelTC: UITableViewCell, Configurable {
     
     func configure(_ item: Item) -> Self {
         label.text = item.text
-        im.image = item.image
+        im.configure(item.image)
         return self
     }
     
@@ -32,9 +32,9 @@ class LabelTC: UITableViewCell, Configurable {
 
 public class LabelCM {
     public let text: String
-    public let image: UIImage
+    public let image: Image
     init(text: String,
-         image: UIImage) {
+         image: Image) {
         self.text = text
         self.image = image
     }

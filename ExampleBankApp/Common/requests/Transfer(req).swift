@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+public struct TransferRequest: Codable {
+    public let sender: String
+    public let receiver: String
+    
+    init(sender: String,
+         receiver: String) {
+        self.sender = sender
+        self.receiver = receiver
+    }
+}

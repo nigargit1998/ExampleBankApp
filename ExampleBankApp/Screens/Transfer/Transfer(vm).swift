@@ -6,3 +6,23 @@
 //
 
 import Foundation
+import UIKit
+
+class TransferViewModel: NSObject {
+
+    var data = TransferModel()
+  
+    
+    func request(completion: @escaping ()->()) {
+        CardNetworkService().request(.init(sender: data.senderCardNumber,
+                                           receiver: data.receiverCardNumber) ,completion: { result in
+            switch result {
+            case .success:
+                completion()
+            case .error(let e):
+                print(e)
+            }
+        })
+    }
+    
+}

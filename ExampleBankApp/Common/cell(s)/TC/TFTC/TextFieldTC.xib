@@ -38,7 +38,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" name="SurfaceVariant2"/>
+                                <color key="backgroundColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="abv-ao-hmr" firstAttribute="centerX" secondItem="zKv-8a-hNq" secondAttribute="centerX" id="231-lI-emh"/>
                                     <constraint firstItem="abv-ao-hmr" firstAttribute="height" secondItem="zKv-8a-hNq" secondAttribute="height" id="5pZ-CM-Xrm"/>
@@ -81,9 +81,6 @@
     </designables>
     <resources>
         <namedColor name="SurfaceVariant">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SurfaceVariant2">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

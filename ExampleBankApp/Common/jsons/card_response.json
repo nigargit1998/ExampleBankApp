@@ -1,6 +1,5 @@
 {
-    "type": "MultiPolygon",
-    "coordinates": [
-        
-    ]
+    "data" : {
+        "cardNumber": "1234 5678 9123 2345"
+    }
 }

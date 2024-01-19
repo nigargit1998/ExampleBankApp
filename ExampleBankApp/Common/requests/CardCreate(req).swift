@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+public struct CardCreateRequest: Codable {
+    public let cardNumber: String
+}

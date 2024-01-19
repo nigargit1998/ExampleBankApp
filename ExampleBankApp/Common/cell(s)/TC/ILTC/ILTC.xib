@@ -37,7 +37,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="0.32958782269999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Muu-gM-FYO" firstAttribute="height" secondItem="NH4-dg-ARn" secondAttribute="height" multiplier="0.95" id="Hmx-fn-52C"/>
                             <constraint firstItem="Muu-gM-FYO" firstAttribute="centerY" secondItem="NH4-dg-ARn" secondAttribute="centerY" id="PrR-24-24C"/>

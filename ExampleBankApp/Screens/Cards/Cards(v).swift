@@ -19,6 +19,7 @@ class CardsView: UIViewController {
         tableView?.register(TFButtonTC.nib, forCellReuseIdentifier: TFButtonTC.identifier)
         tableView?.register(LabelTC.nib, forCellReuseIdentifier: LabelTC.identifier)
         tableView?.separatorStyle = .none
+        self.navigationItem.title = Local.createCards.rawValue
     }
 }
 
@@ -36,14 +37,15 @@ extension CardsView: UITableViewDelegate, UITableViewDataSource {
                                         buttonTitle: Local.create.rawValue,
                                         tap: {
                 guard let text = cell.field.text else { return }
-                    self.viewModel.request(text) {
+                self.render(state: .loading)
+                self.viewModel.request(text) {
                         self.render(state: .reload)
                     }
             }))
         case _:
             let cell = tableView.dequeueReusableCell(withIdentifier: "LabelTC", for: indexPath) as! LabelTC
             return cell.configure(.init(text: viewModel.data.cards[indexPath.row - 1].cardNumber,
-                                        image: .init(systemName: "creditcard") ?? .actions))
+                                        image: .card))
         }
     }
     
@@ -53,13 +55,20 @@ extension CardsView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
+        if indexPath.row > 0 {
+            if let cardViewController = self.storyboard?.instantiateViewController(withIdentifier: "CardView") as? CardView {
+                self.navigationController?.pushViewController(cardViewController, animated: true)
+            }
+        }
     }
-    func render(state: CardViewModelState){
+    func render(state: CardsViewModelState){
         switch state {
         case .reload:
+            ProgressHUD.stop()
             self.cellCount = viewModel.data.cards.count + 1
             tableView?.reloadData()
+        case .loading:
+            ProgressHUD.start()
         case _:
             break
         }

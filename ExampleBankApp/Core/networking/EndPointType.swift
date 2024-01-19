@@ -24,7 +24,7 @@ public extension EndPointType {
     }
     
     var baseURL: String {
-        return "https://nigar.com.az"
+        return "https://something.com.az"
         
     }
     
