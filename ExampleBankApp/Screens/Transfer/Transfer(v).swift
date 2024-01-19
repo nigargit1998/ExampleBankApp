@@ -27,7 +27,9 @@ class TransferView: UIViewController, UITableViewDataSource, UITableViewDelegate
        }
     
     @IBAction func transfer(_ sender: Any) {
+        ProgressHUD.start()
         viewModel.request {
+            ProgressHUD.stop()
             ToastView(title: "Success").show()
             self.navigationController?.popViewController(animated: true)
         }

@@ -42,7 +42,6 @@ class SelectionCardView: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        render(state: .loading)
         let selectedCardNumber = viewModel.data.cards[indexPath.row].cardNumber
         delegate?.didSelectCard(selectedCardNumber)
         self.navigationController?.popViewController(animated: true)

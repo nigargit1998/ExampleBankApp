@@ -306,7 +306,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                                 <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Transfer"/>
                                                 <connections>
                                                     <action selector="transfer:" destination="0WP-IV-4bk" eventType="touchUpInside" id="5Mp-DQ-XhC"/>
                                                 </connections>
